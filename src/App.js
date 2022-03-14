@@ -1,23 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import PlusButton from "./PlusButton";
 
 function App() {
+  const appClick = () => {
+    console.log ('App click')
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PlusButton
+        buttonText='plus one'
+        buttonOnClick={appClick}/>
     </div>
   );
 }
